@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Public summary of the HXNS paired-seed software-in-the-loop validation campaign.">
+  <title>HXNS Public Validation Summary</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header compact-header">
+    <a class="brand" href="../index.html">
+      <img src="../assets/hxns-logo.png" alt="HXNS logo">
+      <span>HXNS</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="../index.html">Overview</a>
+      <a href="https://github.com/thanatchatharmx-eng/hxns/blob/main/docs/RESEARCH.md">Research note</a>
+      <a href="sample-summary.json">JSON</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero report-hero">
+      <p class="eyebrow">PUBLIC EVIDENCE SNAPSHOT</p>
+      <h1>Paired-seed validation, summarized without hiding the limits.</h1>
+      <p class="lede">Four sensor suites are compared under common seeds,
+        mission windows, profiles, and fault timing. This page is a reviewed
+        summary, not the complete run-level archive.</p>
+    </section>
+
+    <section class="metric-grid" aria-label="Campaign metrics">
+      <article class="metric-card"><strong>640/640</strong><span>valid runs</span></article>
+      <article class="metric-card"><strong>20</strong><span>paired seeds</span></article>
+      <article class="metric-card"><strong>4 x 4</strong><span>windows x suites</span></article>
+      <article class="metric-card"><strong>2</strong><span>sensor profiles</span></article>
+    </section>
+
+    <section class="content-section two-column">
+      <div>
+        <p class="eyebrow">PULSAR CONTRIBUTION</p>
+        <h2>Typical and final error move more often than the shared peak.</h2>
+        <p>The full hybrid is compared with IMU + optical for 160 matched
+          scenario/profile/seed pairs. Negative deltas mean the full hybrid
+          produced lower error.</p>
+      </div>
+      <div class="callout">
+        <strong>Interpretation</strong>
+        <p>Worst error remains equal in 119/160 comparisons because a common
+          transient fault peak can dominate both suites. That does not imply
+          that processed pulsar timing had no contribution to the rest of the
+          window.</p>
+      </div>
+    </section>
+
+    <section class="table-wrap" aria-labelledby="ablation-title">
+      <h2 id="ablation-title">Full hybrid minus IMU + optical</h2>
+      <table>
+        <thead><tr><th>Metric</th><th>Full hybrid lower</th><th>Equal</th><th>Full hybrid higher</th></tr></thead>
+        <tbody>
+          <tr><td>Run-mean position error</td><td class="good">155</td><td>0</td><td>5</td></tr>
+          <tr><td>P95 position error</td><td class="good">125</td><td>33</td><td>2</td></tr>
+          <tr><td>Worst position error</td><td class="good">41</td><td>119</td><td>0</td></tr>
+          <tr><td>Final position error</td><td class="good">149</td><td>0</td><td>11</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="content-section two-column">
+      <div>
+        <p class="eyebrow">CAMPAIGN DESIGN</p>
+        <h2>Bounded, deterministic, and inspectable.</h2>
+        <ul class="clean-list">
+          <li>Near-Earth 10 Hz output window</li>
+          <li>Earth-transition 5 Hz output window</li>
+          <li>Deep-space cruise 1 Hz output window</li>
+          <li>Neptune-capture 10 Hz output window</li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">SENSOR SUITES</p>
+        <h2>Ablation is part of the product, not an afterthought.</h2>
+        <ul class="clean-list">
+          <li>IMU only</li>
+          <li>IMU + optical</li>
+          <li>IMU + processed pulsar TOA</li>
+          <li>Full hybrid</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="warning-card">
+      <strong>Research boundary</strong>
+      <p>These are deterministic host software-in-the-loop results under
+        declared engineering assumptions. They are not hardware calibration,
+        LEON5 timing measurements, n-body flight validation, or evidence of
+        flight qualification.</p>
+    </section>
+
+    <section class="provenance">
+      <h2>Provenance</h2>
+      <p>Campaign generated: <code>2026-08-01T04:06:23Z</code></p>
+      <p>Internal source-report SHA-256:</p>
+      <code class="hash">87CF460EC10A137A728840F61DE8D00E4A2F659180E2347C8E178825D084D1A1</code>
+    </section>
+  </main>
+
+  <footer>
+    <span>HXNS public technical materials</span>
+    <a href="../LICENSE">All rights reserved</a>
+  </footer>
+</body>
+</html>

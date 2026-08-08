@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HXNS is a Rust no_std hybrid optical-pulsar-inertial navigation research prototype with reproducible software-in-the-loop evaluation.">
+  <meta name="theme-color" content="#071522">
+  <title>HXNS — Hybrid XNAV-OpticalNAV Service</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="assets/hxns-logo.png" alt="HXNS logo"><span>HXNS</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="#architecture">Architecture</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#evaluation">Evaluation</a>
+      <a href="https://github.com/thanatchatharmx-eng/hxns/blob/main/docs/FAQ.md">FAQ</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero hero-grid">
+      <div>
+        <p class="eyebrow">HYBRID XNAV · OPTICAL NAV · INERTIAL PROPAGATION</p>
+        <h1>Inspectable autonomy for the long distance between observations.</h1>
+        <p class="lede">HXNS is a Rust <code>no_std</code> navigation research prototype that combines processed optical geometry, inertial propagation, processed pulsar timing, atomic-clock correlation, and a compact planetary ephemeris.</p>
+        <div class="cta-row">
+          <a class="button" href="https://github.com/thanatchatharmx-eng/hxns/issues/new?template=evaluation-request.yml">Request an evaluation</a>
+          <a class="button secondary" href="publications/HXNS_Technical_Preprint_EN_v0.2.pdf">Read the preprint</a>
+        </div>
+      </div>
+      <div class="hero-visual"><img src="assets/hxns-architecture.svg" alt="HXNS processed-sensor fusion architecture"></div>
+    </section>
+
+    <section class="metric-grid" aria-label="Validation evidence">
+      <article class="metric-card"><strong>640/640</strong><span>valid deterministic runs</span></article>
+      <article class="metric-card"><strong>4</strong><span>mission windows</span></article>
+      <article class="metric-card"><strong>4</strong><span>sensor suites</span></article>
+      <article class="metric-card"><strong>1/5/10 Hz</strong><span>adaptive navigation output</span></article>
+    </section>
+
+    <section id="architecture" class="content-section two-column">
+      <div>
+        <p class="eyebrow">ARCHITECTURE</p>
+        <h2>The simulator does not replace the estimator.</h2>
+        <p>Truth, synthetic noise, and injected faults stay on the host side. The flight-oriented boundary consumes typed processed products and emits state, covariance, innovations, health decisions, and engineering telemetry.</p>
+      </div>
+      <div class="callout"><strong>Navigation convention</strong><p>State is represented in the Solar-System Barycentric frame using ICRF/J2000 axes. Atomic-clock ticks are correlated to TDB; CPU wall time is not navigation time.</p></div>
+    </section>
+
+    <section id="evidence" class="content-section">
+      <p class="eyebrow">REPRODUCIBLE EVIDENCE</p>
+      <h2>Contribution is measured with paired seeds and ablation.</h2>
+      <div class="card-grid">
+        <article class="info-card"><h3>Common random numbers</h3><p>Suites under comparison reuse initial error, noise generation order, and fault timing.</p></article>
+        <article class="info-card"><h3>Fault campaign</h3><p>Range bias, camera occlusion, pulsar dropout, and IMU bias are reported explicitly.</p></article>
+        <article class="info-card"><h3>Unfavorable results retained</h3><p>A cruise-window mismatch remains documented as a calibration and weighting question.</p></article>
+      </div>
+      <div class="cta-row"><a class="button secondary" href="samples/sample-validation-summary.html">Open validation summary</a><a class="button secondary" href="https://github.com/thanatchatharmx-eng/hxns/blob/main/docs/RESEARCH.md">Read provenance</a></div>
+    </section>
+
+    <section id="evaluation" class="content-section two-column">
+      <div>
+        <p class="eyebrow">CUSTOMER EVALUATION</p>
+        <h2>Declare assumptions. Run the same boundary. Keep the evidence.</h2>
+        <p>The local console validates readable sensor assumptions, runs a background paired-seed campaign, and returns the exact configuration beside HTML, JSON, and CSV artifacts.</p>
+      </div>
+      <div>
+        <ol class="clean-list">
+          <li>Non-confidential fit check</li>
+          <li>Private processed-sensor intake</li>
+          <li>Reviewed configuration</li>
+          <li>Reproducible campaign</li>
+          <li>Report and engineering interpretation</li>
+        </ol>
+        <div class="cta-row"><a class="button" href="https://github.com/thanatchatharmx-eng/hxns/blob/main/docs/EVALUATION.md">Review evaluation scope</a></div>
+      </div>
+    </section>
+
+    <section class="warning-card"><strong>Research boundary</strong><p>HXNS is not presented as flight qualification, certified hardware performance, or an operational replacement for ground navigation. The purpose of the current release is to make estimator assumptions, sensor contribution, and failure behavior inspectable before hardware integration.</p></section>
+  </main>
+
+  <footer><span>HXNS · Independent deep-space navigation research</span><a href="LICENSE">Public materials · All rights reserved</a></footer>
+</body>
+</html>

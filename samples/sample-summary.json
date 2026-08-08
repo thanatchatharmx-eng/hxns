@@ -1,0 +1,22 @@
+{
+  "artifact": "HXNS public validation summary",
+  "campaign_generated_utc": "2026-08-01T04:06:23Z",
+  "hxns_version": "0.1.0",
+  "seed_count": 20,
+  "profiles": 2,
+  "mission_windows": 4,
+  "sensor_suites": 4,
+  "run_duration_seconds": 120.0,
+  "total_runs": 640,
+  "valid_runs": 640,
+  "invalid_runs": 0,
+  "processed_pulsar_ablation_pairs": 160,
+  "pulsar_ablation": {
+    "run_mean_error": { "full_hybrid_lower": 155, "equal": 0, "full_hybrid_higher": 5 },
+    "p95_error": { "full_hybrid_lower": 125, "equal": 33, "full_hybrid_higher": 2 },
+    "worst_error": { "full_hybrid_lower": 41, "equal": 119, "full_hybrid_higher": 0 },
+    "final_error": { "full_hybrid_lower": 149, "equal": 0, "full_hybrid_higher": 11 }
+  },
+  "source_report_sha256": "87CF460EC10A137A728840F61DE8D00E4A2F659180E2347C8E178825D084D1A1",
+  "disclaimer": "Deterministic host software-in-the-loop results under declared engineering assumptions; not hardware calibration or flight qualification."
+}
