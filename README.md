@@ -55,7 +55,7 @@ The current validation campaign contains:
   shared transient faults often dominate that metric.
 
 [Open the public validation summary](https://thanatchatharmx-eng.github.io/hxns/samples/sample-validation-summary.html) or
-[read the technical preprint](publications/HXNS_Technical_Preprint_EN_v0.2.pdf).
+[read the technical preprint](publications/HXNS_Technical_Preprint_EN_v0.3.pdf).
 
 ## Customer Evaluation workflow
 

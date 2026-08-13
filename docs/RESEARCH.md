@@ -54,7 +54,7 @@ calibration.
 The complete internal report remains outside this public repository because it
 contains full run-level data and local release evidence. The public
 [sample summary](../samples/sample-validation-summary.html) and
-[technical preprint](../publications/HXNS_Technical_Preprint_EN_v0.2.pdf)
+[technical preprint](../publications/HXNS_Technical_Preprint_EN_v0.3.pdf)
 carry the reviewed public claims.
 
 ## Interpretation boundary
