@@ -2,4 +2,4 @@ blank_issues_enabled: false
 contact_links:
   - name: HXNS public FAQ
     url: https://github.com/thanatchatharmx-eng/hxns/blob/main/docs/FAQ.md
-    about: Review the current scope and deliberate limitations before opening an evaluation request.
+    about: Review the current R0 scope and deliberate limitations before submitting technical feedback or a sponsored fit check.

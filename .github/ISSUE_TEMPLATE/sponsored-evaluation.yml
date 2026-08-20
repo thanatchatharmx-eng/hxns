@@ -1,0 +1,70 @@
+name: HXNS sponsored fit check (R0)
+description: Explore a future C1 evaluation or a funded R&D milestone without implying that work has begun.
+title: "Sponsored evaluation: "
+labels: ["sponsored-evaluation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        HXNS is currently at R0 — Research Evidence Baseline. This public issue is only a non-confidential fit check; C1 delivery is not yet open. Do not include confidential, proprietary, personal, export-controlled, or security-sensitive information. The applicable readiness review, private intake, written scope, commercial terms, data handling, and a payment schedule must be agreed before work begins.
+  - type: input
+    id: organization
+    attributes:
+      label: Organization or funded project
+      placeholder: University lab, spacecraft company, research programme...
+    validations:
+      required: true
+  - type: dropdown
+    id: engagement
+    attributes:
+      label: Engagement of interest
+      options:
+        - Future C1 Standard Sponsored Evaluation
+        - Custom feasibility pilot
+        - Sponsored R&D milestone
+        - Not sure - request a fit check
+    validations:
+      required: true
+  - type: dropdown
+    id: decision
+    attributes:
+      label: Decision the work should support
+      options:
+        - Compare processed sensor suites
+        - Test uncertainty or cadence assumptions
+        - Assess fault behaviour and recovery
+        - Assess a mission-specific extension
+        - Define the next hardware-in-the-loop milestone
+        - Other bounded engineering decision
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired non-confidential outcome
+      description: Describe the decision and evidence needed, without posting sensitive specifications.
+    validations:
+      required: true
+  - type: dropdown
+    id: budget_status
+    attributes:
+      label: Budget status
+      options:
+        - Approved budget exists
+        - Budget range is being confirmed
+        - Seeking a quote for internal approval
+        - Seeking a research-funding partnership
+    validations:
+      required: true
+  - type: input
+    id: timing
+    attributes:
+      label: Desired decision date
+      placeholder: Month and year, or "exploratory"
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Public-data acknowledgement
+      options:
+        - label: I confirm that this issue contains no confidential, proprietary, personal, export-controlled, or security-sensitive data.
+          required: true

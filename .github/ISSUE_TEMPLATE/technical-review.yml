@@ -1,0 +1,45 @@
+name: HXNS technical review
+description: Volunteer bounded, non-confidential expert feedback without an implied purchase.
+title: "Technical review: "
+labels: ["technical-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue is public. Do not include confidential, proprietary, personal, export-controlled, or security-sensitive information. This path is for bounded expert feedback and is separate from sponsored work.
+  - type: input
+    id: reviewer_context
+    attributes:
+      label: Reviewer context
+      description: Public affiliation, field, or "independent reviewer" is sufficient.
+      placeholder: GNC researcher, spacecraft-systems engineer, timing specialist...
+    validations:
+      required: true
+  - type: dropdown
+    id: review_area
+    attributes:
+      label: Review area
+      options:
+        - Sensor-product interface
+        - Estimation and filtering
+        - Pulsar timing and clock model
+        - Trajectory and dynamics assumptions
+        - Validation methodology
+        - Software architecture
+        - Other bounded topic
+    validations:
+      required: true
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Bounded question or feedback
+      description: State the claim, concern, or review scope without sensitive information.
+    validations:
+      required: true
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Public-data acknowledgement
+      options:
+        - label: I confirm that this issue contains no confidential, proprietary, personal, export-controlled, or security-sensitive data.
+          required: true

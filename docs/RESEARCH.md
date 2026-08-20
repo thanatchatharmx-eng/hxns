@@ -26,28 +26,30 @@ corresponding IMU + optical run:
 
 | Metric | Full hybrid lower | Equal | Full hybrid higher |
 | --- | ---: | ---: | ---: |
-| Run-mean position error | 155 | 0 | 5 |
-| P95 position error | 125 | 33 | 2 |
-| Worst position error | 41 | 119 | 0 |
-| Final position error | 149 | 0 | 11 |
+| Run-mean position error | 150 | 0 | 10 |
+| P95 position error | 118 | 39 | 3 |
+| Worst position error | 44 | 116 | 0 |
+| Final position error | 148 | 0 | 12 |
 
 The frequent equality in worst error shows why a single peak metric is not
 enough to describe contribution: shared injected fault peaks can dominate the
 worst sample while timing information still improves typical or final error.
 
-## Transparent anomaly
+## Tracking-prior correction
 
-The reviewed report retains a cruise-window mismatch in which the full hybrid
-can underperform a reduced suite under some assumptions. It is treated as an
-unresolved optical-model/filter-weighting question, not hidden as a favorable
-result. This is a target for sensitivity analysis and later hardware-informed
-calibration.
+Version 0.3 replaces the earlier fixed-offset/wide-covariance cold start with a
+paired covariance-consistent tracking prior. The earlier cruise inversion was
+traced to a fixed 26.926 km injected error being paired with a declared 2,000 km
+position covariance. The 2,000 km case remains an acquisition-stress diagnostic
+and is not reported as current bounded tracking performance.
 
 ## Provenance
 
-- Validation generated: 2026-08-01T04:06:23Z
+- Validation generated: 2026-08-10T06:24:41Z
+- HXNS core version: `0.1.0`
+- Customer Evaluation version: `0.3.0-beta.1`
 - Source report SHA-256:
-  `87CF460EC10A137A728840F61DE8D00E4A2F659180E2347C8E178825D084D1A1`
+  `D2BCE4EF3FBDC7DFCBFABEB96F76543D8F2030C42142C29426F82F13D814A14A`
 - Reported estimator state size in the host build: 448 bytes
 - Reported high-rate replay sample size in the host build: 536 bytes
 

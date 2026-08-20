@@ -23,6 +23,10 @@ exercised in repeatable validation campaigns.
 > flight qualification, certified sensor performance, or an operational
 > replacement for ground navigation.
 
+> **Product stage:** R0 — Research Evidence Baseline. The transition path is
+> `R0 -> external feedback -> R1 -> readiness gates -> C1`. Non-confidential
+> sponsored fit checks may be submitted during R0, but C1 delivery is not yet open.
+
 ## Architecture
 
 ![HXNS public architecture diagram](assets/hxns-architecture.svg)
@@ -50,8 +54,8 @@ The current validation campaign contains:
 - Standard camera range-bias, camera-occlusion, pulsar-dropout, and IMU-bias
   fault campaigns.
 - A processed-pulsar ablation in which the full hybrid reduced run-mean error
-  in **155/160** paired comparisons and final error in **149/160** comparisons.
-  Worst-error peaks were unchanged in **119/160** comparisons, showing that
+  in **150/160** paired comparisons and final error in **148/160** comparisons.
+  Worst-error peaks were unchanged in **116/160** comparisons, showing that
   shared transient faults often dominate that metric.
 
 [Open the public validation summary](https://thanatchatharmx-eng.github.io/hxns/samples/sample-validation-summary.html) or
@@ -75,13 +79,21 @@ is a scoped feasibility pilot rather than an implied generic feature.
 [Review the evaluation boundary](docs/EVALUATION.md) and
 [read the FAQ](docs/FAQ.md).
 
-## Request an evaluation
+## Technical review and sponsored fit checks
 
-Use the public
-[evaluation-request form](https://github.com/thanatchatharmx-eng/hxns/issues/new?template=evaluation-request.yml)
-for a non-confidential first contact. **Do not include proprietary mission or
-sensor data in a public GitHub issue.** A private exchange can be arranged only
-after scope and fit are established.
+Use the public [technical-review form](https://github.com/thanatchatharmx-eng/hxns/issues/new?template=technical-review.yml)
+to volunteer bounded expert feedback. Use the separate
+[sponsored-evaluation fit check](https://github.com/thanatchatharmx-eng/hxns/issues/new?template=sponsored-evaluation.yml)
+when an organization has a budgeted decision question, wants to explore a
+future C1 study, or wishes to fund a defined R&D milestone. A fit check does not
+mean that C1 is ready or that work has begun. Sponsored work starts only after
+the applicable readiness review, written scope, commercial terms, data
+handling, and payment schedule are agreed.
+
+[Read the current sponsored-evaluation brief](publications/HXNS_Sponsored_Evaluation_One_Page_v0.2.pdf).
+
+**Do not include proprietary mission or sensor data in a public GitHub issue.**
+A private exchange can be arranged only after scope and fit are established.
 
 ## Public/private boundary
 

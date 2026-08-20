@@ -15,6 +15,7 @@
       <a href="#architecture">Architecture</a>
       <a href="#evidence">Evidence</a>
       <a href="#evaluation">Evaluation</a>
+      <a href="#sponsored">Sponsored work</a>
       <a href="https://github.com/thanatchatharmx-eng/hxns/blob/main/docs/FAQ.md">FAQ</a>
     </nav>
   </header>
@@ -23,10 +24,12 @@
     <section class="hero hero-grid">
       <div>
         <p class="eyebrow">HYBRID XNAV · OPTICAL NAV · INERTIAL PROPAGATION</p>
+        <p class="status-badge">R0 · RESEARCH EVIDENCE BASELINE</p>
         <h1>Inspectable autonomy for the long distance between observations.</h1>
         <p class="lede">HXNS is a Rust <code>no_std</code> navigation research prototype that combines processed optical geometry, inertial propagation, processed pulsar timing, atomic-clock correlation, and a compact planetary ephemeris.</p>
         <div class="cta-row">
-          <a class="button" href="https://github.com/thanatchatharmx-eng/hxns/issues/new?template=evaluation-request.yml">Request an evaluation</a>
+          <a class="button" href="#sponsored">Explore a sponsored fit check</a>
+          <a class="button secondary" href="https://github.com/thanatchatharmx-eng/hxns/issues/new?template=technical-review.yml">Provide technical feedback</a>
           <a class="button secondary" href="publications/HXNS_Technical_Preprint_EN_v0.3.pdf">Read the preprint</a>
         </div>
       </div>
@@ -74,8 +77,55 @@
           <li>Reproducible campaign</li>
           <li>Report and engineering interpretation</li>
         </ol>
-        <div class="cta-row"><a class="button" href="https://github.com/thanatchatharmx-eng/hxns/blob/main/docs/EVALUATION.md">Review evaluation scope</a></div>
+        <div class="cta-row"><a class="button secondary" href="https://github.com/thanatchatharmx-eng/hxns/blob/main/docs/EVALUATION.md">Review evaluation scope</a></div>
       </div>
+    </section>
+
+    <section id="sponsored" class="content-section sponsored-section">
+      <div class="section-heading">
+        <p class="eyebrow">SPONSORED FIT CHECK</p>
+        <h2>Open a fit check now. Open C1 delivery only after readiness.</h2>
+        <p class="lede compact-lede">HXNS is accepting non-confidential fit checks during R0 to understand decision questions and budget paths. This is separate from academic technical review and does not mean that C1 is ready or that paid work has begun.</p>
+      </div>
+      <div class="stage-roadmap" aria-label="HXNS commercial readiness path">
+        <span class="stage-node current"><small>CURRENT</small>R0 Research Evidence</span>
+        <b>→</b>
+        <span class="stage-node"><small>PENDING</small>External feedback</span>
+        <b>→</b>
+        <span class="stage-node"><small>NEXT CANDIDATE</small>R1 Integration</span>
+        <b>→</b>
+        <span class="stage-node"><small>REQUIRED</small>Readiness gates</span>
+        <b>→</b>
+        <span class="stage-node"><small>FUTURE</small>C1 Sponsored Evaluation</span>
+      </div>
+      <div class="engagement-grid">
+        <article class="engagement-card">
+          <span class="engagement-label">01 · PLANNED C1 BOUNDARY</span>
+          <h3>C1 Standard Sponsored Evaluation</h3>
+          <p>A fit check can be submitted now. Delivery under this standard scope opens only after external feedback, R1 integration, and readiness-gate review.</p>
+          <strong>Fit checks open · C1 delivery pending</strong>
+        </article>
+        <article class="engagement-card">
+          <span class="engagement-label">02 · SCOPED CHANGE</span>
+          <h3>Custom feasibility pilot</h3>
+          <p>Assess a new trajectory, body set, sensor-product model, catalogue, interface, cadence, or fault schedule as a defined engineering milestone.</p>
+          <strong>Milestone quote after scoping</strong>
+        </article>
+        <article class="engagement-card">
+          <span class="engagement-label">03 · NEXT EVIDENCE</span>
+          <h3>Sponsored R&amp;D milestone</h3>
+          <p>Fund the next evidence step, such as hardware-in-the-loop, LEON5 integration work, ephemeris extension, or mission-specific validation.</p>
+          <strong>Deliverables and payment schedule agreed first</strong>
+        </article>
+      </div>
+      <div class="sponsor-process" aria-label="Sponsored evaluation process">
+        <span>Non-confidential fit check</span><b>→</b><span>Boundary and readiness review</span><b>→</b><span>Written scope and quote</span><b>→</b><span>Agreement and initial payment</span><b>→</b><span>Work begins</span>
+      </div>
+      <div class="cta-row">
+        <a class="button" href="https://github.com/thanatchatharmx-eng/hxns/issues/new?template=sponsored-evaluation.yml">Submit a sponsored fit check</a>
+        <a class="button secondary" href="publications/HXNS_Sponsored_Evaluation_One_Page_v0.2.pdf">Download the one-page brief</a>
+      </div>
+      <p class="privacy-note">Public forms accept non-confidential information only. Submitting a fit check does not mean C1 is ready or that work has begun. No work begins until the applicable readiness review, scope, commercial terms, data handling, and payment schedule are agreed in writing.</p>
     </section>
 
     <section class="warning-card"><strong>Research boundary</strong><p>HXNS is not presented as flight qualification, certified hardware performance, or an operational replacement for ground navigation. The purpose of the current release is to make estimator assumptions, sensor contribution, and failure behavior inspectable before hardware integration.</p></section>

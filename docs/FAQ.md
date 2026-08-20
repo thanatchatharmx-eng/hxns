@@ -56,7 +56,11 @@ handled under separate evaluation terms.
 
 ## How should an organization make first contact?
 
-Open a non-confidential
-[evaluation request](https://github.com/thanatchatharmx-eng/hxns/issues/new?template=evaluation-request.yml).
-Do not post proprietary specifications publicly. A private channel can be
-established after the public fit check.
+HXNS is currently at **R0 — Research Evidence Baseline**. To volunteer bounded
+expert feedback, use the public
+[technical-review form](https://github.com/thanatchatharmx-eng/hxns/issues/new?template=technical-review.yml).
+To explore future paid work or a defined sponsored R&D milestone, use the
+[sponsored-evaluation fit check](https://github.com/thanatchatharmx-eng/hxns/issues/new?template=sponsored-evaluation.yml).
+A sponsored fit check does not mean that C1 delivery is open or that work has
+begun. Do not post proprietary specifications publicly; a private channel can
+be established only after the initial fit check.
